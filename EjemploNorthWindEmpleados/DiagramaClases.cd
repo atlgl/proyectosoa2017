@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EjemploNorthWindEmpleados.AccesoDatos.ConexionBD">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQCAAAQAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>AccesoDatos\ConexionBD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploNorthWindEmpleados.AccesoDatos.Employees">
+    <Position X="3.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAggIAAAA=</HashCode>
+      <FileName>AccesoDatos\Employees.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploNorthWindEmpleados.Entidades.Employee">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Entidades\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploNorthWindEmpleados.Entidades.Customer">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Entidades\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploNorthWindEmpleados.AccesoDatos.Customers">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccesoDatos\Customers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EjemploNorthWindEmpleados.AccesoDatos.IOperaciones&lt;T&gt;">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAggIAAAA=</HashCode>
+      <FileName>AccesoDatos\IOperaciones.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
