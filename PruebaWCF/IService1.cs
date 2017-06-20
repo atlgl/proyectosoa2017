@@ -19,6 +19,12 @@ namespace PruebaWCF
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        int sumar(int a, int b);
+
+        [OperationContract]
+        int multiplicacion(int a, int b);
+
         // TODO: Add your service operations here
     }
 

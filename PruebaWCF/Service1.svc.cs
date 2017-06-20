@@ -29,5 +29,15 @@ namespace PruebaWCF
             }
             return composite;
         }
+
+        public int multiplicacion(int a, int b)
+        {
+            return a * b;
+        }
+
+        public int sumar(int a, int b)
+        {
+            return a + b;
+        }
     }
 }

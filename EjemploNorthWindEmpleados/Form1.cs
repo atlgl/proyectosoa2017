@@ -35,5 +35,12 @@ namespace EjemploNorthWindEmpleados
             EmployeeWindow ventanita = new EmployeeWindow();
             ventanita.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WebServicePrueba.Service1Client c = new WebServicePrueba.Service1Client();
+            int res=c.sumar(10, 10);
+            MessageBox.Show("Resultado:." + res);
+        }
     }
 }

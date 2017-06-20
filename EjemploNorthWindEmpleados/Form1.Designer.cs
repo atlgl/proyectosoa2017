@@ -50,6 +50,7 @@
             this.conexionDBDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionEntityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
@@ -73,10 +74,10 @@
             this.phoneDataGridViewTextBoxColumn,
             this.faxDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customersBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(768, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(768, 305);
             this.dataGridView1.TabIndex = 0;
             // 
             // customerIDDataGridViewTextBoxColumn
@@ -207,11 +208,22 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 401);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -251,6 +263,7 @@
         private System.Windows.Forms.ToolStripMenuItem conexionDBDatasetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conexionEntityFrameworkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

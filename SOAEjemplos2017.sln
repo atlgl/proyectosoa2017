@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploNorthWindEmpleados", "EjemploNorthWindEmpleados\EjemploNorthWindEmpleados.csproj", "{02E588A5-A06C-41D8-ADC7-07AAF8348393}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4261A79A-F0CA-496E-879A-6E0B8CE09ED3} = {4261A79A-F0CA-496E-879A-6E0B8CE09ED3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{5605261D-98C4-4776-977A-8CA53E2803F1}"
 EndProject
@@ -16,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNorthWindV1", "WebNorthWindV1\WebNorthWindV1.csproj", "{D9440CAB-BE24-467C-A2D5-73DE317FF9BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNorthWind", "WebApiNorthWind\WebApiNorthWind.csproj", "{A8A737F9-0A05-4194-9C6C-0E0495A3533A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaWCF", "PruebaWCF\PruebaWCF.csproj", "{4261A79A-F0CA-496E-879A-6E0B8CE09ED3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,10 @@ Global
 		{A8A737F9-0A05-4194-9C6C-0E0495A3533A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A737F9-0A05-4194-9C6C-0E0495A3533A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A737F9-0A05-4194-9C6C-0E0495A3533A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4261A79A-F0CA-496E-879A-6E0B8CE09ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4261A79A-F0CA-496E-879A-6E0B8CE09ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4261A79A-F0CA-496E-879A-6E0B8CE09ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4261A79A-F0CA-496E-879A-6E0B8CE09ED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
