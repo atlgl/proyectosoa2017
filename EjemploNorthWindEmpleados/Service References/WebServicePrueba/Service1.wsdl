@@ -61,6 +61,18 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="getAll">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PruebaWCF" minOccurs="0" name="getAllResult" nillable="true" type="q3:ArrayOfEmployees" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:schema>
     <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="anyType" nillable="true" type="xs:anyType" />
@@ -111,6 +123,19 @@
         </xs:sequence>
       </xs:complexType>
       <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+      <xs:complexType name="ArrayOfEmployees">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" nillable="true" type="tns:Employees" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfEmployees" nillable="true" type="tns:ArrayOfEmployees" />
+      <xs:complexType name="Employees">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmployeeID" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Employees" nillable="true" type="tns:Employees" />
     </xs:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetData_InputMessage">
@@ -137,6 +162,12 @@
   <wsdl:message name="IService1_multiplicacion_OutputMessage">
     <wsdl:part name="parameters" element="tns:multiplicacionResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -153,6 +184,10 @@
     <wsdl:operation name="multiplicacion">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/multiplicacion" message="tns:IService1_multiplicacion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/multiplicacionResponse" message="tns:IService1_multiplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAll" message="tns:IService1_getAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllResponse" message="tns:IService1_getAll_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -186,6 +221,15 @@
     </wsdl:operation>
     <wsdl:operation name="multiplicacion">
       <soap:operation soapAction="http://tempuri.org/IService1/multiplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAll" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

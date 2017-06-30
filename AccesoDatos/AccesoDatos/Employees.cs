@@ -14,7 +14,7 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
         {
             ConexionBD con = new ConexionBD();
             List<Employee> listaobjetos = new List<Employee>();
-            SqlDataReader dr = con.executeQuery("GetAllEmployees",null);
+            SqlDataReader dr = con.executeQuery("SELECT * FROM Employees");
             while (dr.Read())
             {
                 Employee emp = new Employee();
@@ -53,19 +53,18 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
             
         }
 
-        //city ivan
+        //ivan customercustomerdemo
         //customers liove
         //ismael products
-        //David Categorys
-        //jesus historyOrderDetail,
-        //usuario correo password,idemployeee,activado, 
+        //David Categories
+        //jesus employeesterritories
         //region ivan
         //territories amiguito
         //orders noe 
         //ordersdetails alfredo
         //carlos shippers
-        //karla suplliers
-        //erika customer demographis
+        //karla suppliers
+        //erika customerdemographis
 
 
 

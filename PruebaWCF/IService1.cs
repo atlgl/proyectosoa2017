@@ -25,6 +25,9 @@ namespace PruebaWCF
         [OperationContract]
         int multiplicacion(int a, int b);
 
+        [OperationContract]
+        List<Employees> getAll();
+
         // TODO: Add your service operations here
     }
 
@@ -50,4 +53,14 @@ namespace PruebaWCF
             set { stringValue = value; }
         }
     }
+
+    [DataContract]
+    public class Employees
+    {
+        [DataMember]
+        public int EmployeeID { get; set; }
+        [DataMember]
+        public String FirstName { get; set; }
+    }
+
 }

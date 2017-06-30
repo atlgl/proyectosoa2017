@@ -23,6 +23,7 @@ namespace EjemploNorthWindEmpleados
             // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
 
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,6 +41,10 @@ namespace EjemploNorthWindEmpleados
         {
             WebServicePrueba.Service1Client c = new WebServicePrueba.Service1Client();
             int res=c.sumar(10, 10);
+            WebServicePrueba.Employees[] lista = c.getAll();
+
+            dataGridView1.DataSource = lista;
+
             MessageBox.Show("Resultado:." + res);
         }
     }

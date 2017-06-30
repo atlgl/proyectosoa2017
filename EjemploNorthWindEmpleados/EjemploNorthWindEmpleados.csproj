@@ -120,6 +120,9 @@
     <None Include="Service References\WebServicePrueba\EjemploNorthWindEmpleados.WebServicePrueba.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WebServicePrueba\EjemploNorthWindEmpleados.WebServicePrueba.Employees.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WebServicePrueba\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
