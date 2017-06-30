@@ -47,6 +47,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionBDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dllEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shipperDSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionDBDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionEntityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,10 +77,11 @@
             this.phoneDataGridViewTextBoxColumn,
             this.faxDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customersBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 84);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 68);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(768, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(576, 248);
             this.dataGridView1.TabIndex = 0;
             // 
             // customerIDDataGridViewTextBoxColumn
@@ -167,7 +171,8 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(793, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(595, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -179,40 +184,67 @@
             this.conexionEntityFrameworkToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // conexionBDToolStripMenuItem
             // 
+            this.conexionBDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.suppliersToolStripMenuItem,
+            this.shipperDSToolStripMenuItem});
             this.conexionBDToolStripMenuItem.Name = "conexionBDToolStripMenuItem";
-            this.conexionBDToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.conexionBDToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.conexionBDToolStripMenuItem.Text = "Conexion BD";
             this.conexionBDToolStripMenuItem.Click += new System.EventHandler(this.conexionBDToolStripMenuItem_Click);
+            // 
+            // suppliersToolStripMenuItem
+            // 
+            this.suppliersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dllEFToolStripMenuItem});
+            this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
+            this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.suppliersToolStripMenuItem.Text = "Shippers";
+            this.suppliersToolStripMenuItem.Click += new System.EventHandler(this.suppliersToolStripMenuItem_Click);
+            // 
+            // dllEFToolStripMenuItem
+            // 
+            this.dllEFToolStripMenuItem.Name = "dllEFToolStripMenuItem";
+            this.dllEFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dllEFToolStripMenuItem.Text = "WCFconsumir";
+            this.dllEFToolStripMenuItem.Click += new System.EventHandler(this.dllEFToolStripMenuItem_Click);
+            // 
+            // shipperDSToolStripMenuItem
+            // 
+            this.shipperDSToolStripMenuItem.Name = "shipperDSToolStripMenuItem";
+            this.shipperDSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.shipperDSToolStripMenuItem.Text = "ShipperDS";
+            this.shipperDSToolStripMenuItem.Click += new System.EventHandler(this.shipperDSToolStripMenuItem_Click);
             // 
             // conexionDBDatasetToolStripMenuItem
             // 
             this.conexionDBDatasetToolStripMenuItem.Name = "conexionDBDatasetToolStripMenuItem";
-            this.conexionDBDatasetToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.conexionDBDatasetToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.conexionDBDatasetToolStripMenuItem.Text = "Conexion DB Dataset";
             // 
             // conexionEntityFrameworkToolStripMenuItem
             // 
             this.conexionEntityFrameworkToolStripMenuItem.Name = "conexionEntityFrameworkToolStripMenuItem";
-            this.conexionEntityFrameworkToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.conexionEntityFrameworkToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.conexionEntityFrameworkToolStripMenuItem.Text = "Conexion Entity Framework";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 32);
+            this.button1.Location = new System.Drawing.Point(10, 26);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -220,13 +252,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 401);
+            this.ClientSize = new System.Drawing.Size(595, 326);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -264,6 +297,9 @@
         private System.Windows.Forms.ToolStripMenuItem conexionEntityFrameworkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem suppliersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dllEFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shipperDSToolStripMenuItem;
     }
 }
 

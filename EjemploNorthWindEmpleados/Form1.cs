@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EjemploNorthWindEmpleados.Guis.shippers;
+
+
+
 
 namespace EjemploNorthWindEmpleados
 {
@@ -33,8 +37,7 @@ namespace EjemploNorthWindEmpleados
 
         private void conexionBDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EmployeeWindow ventanita = new EmployeeWindow();
-            ventanita.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +49,31 @@ namespace EjemploNorthWindEmpleados
             dataGridView1.DataSource = lista;
 
             MessageBox.Show("Resultado:." + res);
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void suppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShipprsFormDll ventanita = new ShipprsFormDll();
+            ventanita.Show();
+
+        }
+
+        private void dllEFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consumir_WFC tanita = new Consumir_WFC();
+            tanita.Show();
+
+        }
+
+        private void shipperDSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDataset ventana = new FormDataset();
+            ventana.Show();
         }
     }
 }

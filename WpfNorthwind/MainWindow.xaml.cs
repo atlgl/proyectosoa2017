@@ -26,6 +26,14 @@ namespace WpfNorthwind
         {
             InitializeComponent();
             dataGrid.Loaded += DataGrid_Loaded;
+            dataGrid1.Loaded += DataGrid1_Loaded; 
+          
+        }
+
+        private void DataGrid1_Loaded(object sender, RoutedEventArgs e)
+        {
+            AccesoDatosEF.NorthwindEntities db = new NorthwindEntities();
+            dataGrid1.ItemsSource = db.Shippers.ToList();
         }
 
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
@@ -33,6 +41,8 @@ namespace WpfNorthwind
             AccesoDatosEF.NorthwindEntities db = new NorthwindEntities();
             
             dataGrid.ItemsSource = db.Employees.ToList();
+            
+            
             //          AccesoDatosDs.DataSetNorthWindTableAdapters.EmployeesTableAdapter tabla = new AccesoDatosDs.DataSetNorthWindTableAdapters.EmployeesTableAdapter();
             //        tabla.DeleteQuery(13);
 

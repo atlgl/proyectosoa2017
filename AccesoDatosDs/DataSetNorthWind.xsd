@@ -155,7 +155,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
               <Mapping SourceColumn="PhotoPath" DataSetColumn="PhotoPath" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Employees] WHERE ([EmployeeID] = @Original_EmployeeID) </CommandText>
@@ -165,7 +165,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetAllEmployees</CommandText>
@@ -175,7 +175,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.Employees" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetEmployeeById" Modifier="Public" Name="GetEmployeeById" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="GetEmployeeById">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.Employees" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetEmployeeById" Modifier="Public" Name="GetEmployeeById" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetEmployeeById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireDate, Address, City, Region, PostalCode, Country, HomePhone, Extension, Photo, Notes, ReportsTo, PhotoPath
@@ -187,7 +187,7 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Employees] ([LastName], [FirstName], [Title], [TitleOfCourtesy], [BirthDate], [HireDate], [Address], [City], [Region], [PostalCode], [Country], [HomePhone], [Extension], [Photo], [Notes], [ReportsTo], [PhotoPath]) VALUES (@LastName, @FirstName, @Title, @TitleOfCourtesy, @BirthDate, @HireDate, @Address, @City, @Region, @PostalCode, @Country, @HomePhone, @Extension, @Photo, @Notes, @ReportsTo, @PhotoPath);</CommandText>
@@ -213,7 +213,7 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Employees] SET [LastName] = @LastName, [FirstName] = @FirstName, [Title] = @Title, [TitleOfCourtesy] = @TitleOfCourtesy, [BirthDate] = @BirthDate, [HireDate] = @HireDate, [Address] = @Address, [City] = @City, [Region] = @Region, [PostalCode] = @PostalCode, [Country] = @Country, [HomePhone] = @HomePhone, [Extension] = @Extension, [Photo] = @Photo, [Notes] = @Notes, [ReportsTo] = @ReportsTo, [PhotoPath] = @PhotoPath WHERE ([EmployeeID] = @Original_EmployeeID)</CommandText>
@@ -241,6 +241,61 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                 </UpdateCommand>
               </DbSource>
             </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShippersTableAdapter" GeneratorDataComponentClassName="ShippersTableAdapter" Name="Shippers" UserDataComponentName="ShippersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.Shippers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Shippers] WHERE (([ShipperID] = @Original_ShipperID) AND ([CompanyName] = @Original_CompanyName) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ShipperID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipperID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CompanyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Shippers] ([CompanyName], [Phone]) VALUES (@CompanyName, @Phone);
+SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ShipperID, CompanyName, Phone
+FROM            Shippers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Shippers] SET [CompanyName] = @CompanyName, [Phone] = @Phone WHERE (([ShipperID] = @Original_ShipperID) AND ([CompanyName] = @Original_CompanyName) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)));
+SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = @ShipperID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ShipperID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipperID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CompanyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ShipperID" ColumnName="ShipperID" DataSourceName="Northwind.dbo.Shippers" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ShipperID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ShipperID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ShipperID" DataSetColumn="ShipperID" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+            </Mappings>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -352,11 +407,36 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Shippers" msprop:Generator_TableClassName="ShippersDataTable" msprop:Generator_TableVarName="tableShippers" msprop:Generator_RowChangedName="ShippersRowChanged" msprop:Generator_TablePropName="Shippers" msprop:Generator_RowDeletingName="ShippersRowDeleting" msprop:Generator_RowChangingName="ShippersRowChanging" msprop:Generator_RowEvHandlerName="ShippersRowChangeEventHandler" msprop:Generator_RowDeletedName="ShippersRowDeleted" msprop:Generator_RowClassName="ShippersRow" msprop:Generator_UserTableName="Shippers" msprop:Generator_RowEvArgName="ShippersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipperID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnShipperID" msprop:Generator_ColumnPropNameInRow="ShipperID" msprop:Generator_ColumnPropNameInTable="ShipperIDColumn" msprop:Generator_UserColumnName="ShipperID" type="xs:int" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Employees" />
       <xs:field xpath="mstns:EmployeeID" />
+    </xs:unique>
+    <xs:unique name="Shippers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Shippers" />
+      <xs:field xpath="mstns:ShipperID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

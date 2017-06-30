@@ -22,7 +22,7 @@ namespace EjemploNorthWindEmpleados.Guis.Employees
         {
             String consulta = "INSERT INTO Employees (firstname,lastname,title) VALUES('"+txtfn.Text+"','"+txtlastname.Text+"','"+txttitle.Text+"')";
             String cadena =
-                "Data Source=./;Initial Catalog=Northwind;" +
+                "Data Source=DESKTOP-C248MND;Initial Catalog=Northwind;" +
                 "User ID=sa;Password=sa123";
             SqlConnection con = new SqlConnection(cadena);
             con.Open();

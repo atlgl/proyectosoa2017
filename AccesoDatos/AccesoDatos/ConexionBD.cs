@@ -11,7 +11,7 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
 
     public class ConexionBD
     {
-        private SqlConnection con;
+        public SqlConnection con;
         private SqlCommand cmd;
         
         public ConexionBD()

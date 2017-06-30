@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -45,8 +46,10 @@
     <Compile Include="AccesoDatos\Customers.cs" />
     <Compile Include="AccesoDatos\Employees.cs" />
     <Compile Include="AccesoDatos\IOperaciones.cs" />
+    <Compile Include="AccesoDatos\Shippers.cs" />
     <Compile Include="Entidades\Customer.cs" />
     <Compile Include="Entidades\Employee.cs" />
+    <Compile Include="Entidades\Shipper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

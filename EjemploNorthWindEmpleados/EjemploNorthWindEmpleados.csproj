@@ -35,6 +35,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -60,10 +62,38 @@
     <Compile Include="Guis\Employees\EmployeeEditSave.Designer.cs">
       <DependentUpon>EmployeeEditSave.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guis\shippers\Consumir WFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\shippers\Consumir WFC.Designer.cs">
+      <DependentUpon>Consumir WFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guis\shippers\FormDataset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\shippers\FormDataset.Designer.cs">
+      <DependentUpon>FormDataset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guis\shippers\ShipprsFormDll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\shippers\ShipprsFormDll.Designer.cs">
+      <DependentUpon>ShipprsFormDll.cs</DependentUpon>
+    </Compile>
     <Compile Include="NorthwindDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +102,11 @@
     </Compile>
     <Compile Include="Guis\Employees\EmployeeWindow.Designer.cs">
       <DependentUpon>EmployeeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Ship\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\WebServicePrueba\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -83,6 +118,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guis\Employees\EmployeeEditSave.resx">
       <DependentUpon>EmployeeEditSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guis\shippers\Consumir WFC.resx">
+      <DependentUpon>Consumir WFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guis\shippers\FormDataset.resx">
+      <DependentUpon>FormDataset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guis\shippers\ShipprsFormDll.resx">
+      <DependentUpon>ShipprsFormDll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +152,28 @@
     <None Include="NorthwindDataSet.xss">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </None>
+    <None Include="NorthwindDataSet1.xsc">
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NorthwindDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NorthwindDataSet1.xss">
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet2.xsc">
+      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NorthwindDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NorthwindDataSet2.xss">
+      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +183,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\Ship\EjemploNorthWindEmpleados.Ship.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ship\EjemploNorthWindEmpleados.Ship.Employees.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ship\Service1.wsdl" />
+    <None Include="Service References\Ship\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ship\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ship\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\WebServicePrueba\EjemploNorthWindEmpleados.WebServicePrueba.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -137,6 +219,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Ship\" />
     <WCFMetadataStorage Include="Service References\WebServicePrueba\" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +230,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WebServicePrueba\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatosDs\AccesoDatosDs.csproj">
+      <Project>{F2C83713-8967-4635-98C2-9208665E1E67}</Project>
+      <Name>AccesoDatosDs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{5605261d-98c4-4776-977a-8ca53e2803f1}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Ship\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Ship\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Ship\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Ship\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

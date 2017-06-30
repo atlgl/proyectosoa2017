@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfNorthwind"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="355" Width="527">
     <Grid>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="0,0,0,-0.2" VerticalAlignment="Top" Height="321" Width="518">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="354*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="124" Width="517" Grid.ColumnSpan="3" Margin="2,12,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="IdEmployees"/>
             </DataGrid.Columns>
         </DataGrid>
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="0,167,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="517" Height="157"/>
+        <Label x:Name="label" Content="Shippers" HorizontalAlignment="Left" Margin="6,141,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
