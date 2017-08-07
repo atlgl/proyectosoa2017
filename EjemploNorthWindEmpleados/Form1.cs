@@ -1,4 +1,5 @@
 ﻿using EjemploNorthWindEmpleados.Gui.Employees;
+using EjemploNorthWindEmpleados.Guis.Categories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,8 +34,7 @@ namespace EjemploNorthWindEmpleados
 
         private void conexionBDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EmployeeWindow ventanita = new EmployeeWindow();
-            ventanita.Show();
+            // NOTHING
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +46,24 @@ namespace EjemploNorthWindEmpleados
             dataGridView1.DataSource = lista;
 
             MessageBox.Show("Resultado:." + res);
+        }
+
+        private void conexionDBDatasetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeWindow ventanita = new EmployeeWindow();
+            ventanita.Show();
+        }
+
+        private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Add my own windowform from table
+            Categories ventana = new Categories();
+            ventana.Show();
         }
     }
 }

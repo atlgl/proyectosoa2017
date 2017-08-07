@@ -65,11 +65,5 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
         //carlos shippers
         //karla suppliers
         //erika customerdemographis
-
-
-
-
-
-     
     }
 }

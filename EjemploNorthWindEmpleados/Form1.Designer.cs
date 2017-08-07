@@ -51,6 +51,8 @@
             this.conexionEntityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
@@ -184,6 +186,9 @@
             // 
             // conexionBDToolStripMenuItem
             // 
+            this.conexionBDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesToolStripMenuItem,
+            this.categoriesToolStripMenuItem});
             this.conexionBDToolStripMenuItem.Name = "conexionBDToolStripMenuItem";
             this.conexionBDToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.conexionBDToolStripMenuItem.Text = "Conexion BD";
@@ -194,6 +199,7 @@
             this.conexionDBDatasetToolStripMenuItem.Name = "conexionDBDatasetToolStripMenuItem";
             this.conexionDBDatasetToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.conexionDBDatasetToolStripMenuItem.Text = "Conexion DB Dataset";
+            this.conexionDBDatasetToolStripMenuItem.Click += new System.EventHandler(this.conexionDBDatasetToolStripMenuItem_Click);
             // 
             // conexionEntityFrameworkToolStripMenuItem
             // 
@@ -217,6 +223,20 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
+            // 
+            // categoriesToolStripMenuItem
+            // 
+            this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.categoriesToolStripMenuItem.Text = "Categories";
+            this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.categoriesToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -264,6 +284,8 @@
         private System.Windows.Forms.ToolStripMenuItem conexionEntityFrameworkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
     }
 }
 
