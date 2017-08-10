@@ -26,7 +26,7 @@ namespace AccesoDatosDs.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=./;Initial Catalog=Northwind;User ID=sa;Password=sa123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-41IUBS2\\SQLEXPRESS;Initial Catalog=NORTHWND;User ID=sa;Password=genexus")]
         public string NorthwindConnectionString {
             get {
                 return ((string)(this["NorthwindConnectionString"]));

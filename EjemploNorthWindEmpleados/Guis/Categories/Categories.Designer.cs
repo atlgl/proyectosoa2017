@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 30);
+            this.label2.Location = new System.Drawing.Point(79, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 17);
             this.label2.TabIndex = 1;
@@ -59,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 70);
+            this.label3.Location = new System.Drawing.Point(45, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 2;
@@ -67,21 +69,21 @@
             // 
             // tb_category_name
             // 
-            this.tb_category_name.Location = new System.Drawing.Point(197, 27);
+            this.tb_category_name.Location = new System.Drawing.Point(191, 27);
             this.tb_category_name.Name = "tb_category_name";
             this.tb_category_name.Size = new System.Drawing.Size(276, 22);
             this.tb_category_name.TabIndex = 3;
             // 
             // tb_category_description
             // 
-            this.tb_category_description.Location = new System.Drawing.Point(197, 70);
+            this.tb_category_description.Location = new System.Drawing.Point(191, 70);
             this.tb_category_description.Name = "tb_category_description";
             this.tb_category_description.Size = new System.Drawing.Size(276, 22);
             this.tb_category_description.TabIndex = 4;
             // 
             // btn_insert
             // 
-            this.btn_insert.Location = new System.Drawing.Point(69, 127);
+            this.btn_insert.Location = new System.Drawing.Point(63, 117);
             this.btn_insert.Name = "btn_insert";
             this.btn_insert.Size = new System.Drawing.Size(109, 23);
             this.btn_insert.TabIndex = 5;
@@ -91,7 +93,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(217, 127);
+            this.btn_update.Location = new System.Drawing.Point(209, 117);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(109, 23);
             this.btn_update.TabIndex = 6;
@@ -101,7 +103,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(364, 127);
+            this.btn_delete.Location = new System.Drawing.Point(358, 117);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(109, 23);
             this.btn_delete.TabIndex = 7;
@@ -112,18 +114,24 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 197);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 163);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(419, 298);
+            this.dataGridView1.Size = new System.Drawing.Size(474, 311);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Categories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 526);
+            this.ClientSize = new System.Drawing.Size(504, 489);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
@@ -152,5 +160,6 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

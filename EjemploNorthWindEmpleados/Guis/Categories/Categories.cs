@@ -7,31 +7,22 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
 {
     public partial class Categories : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-41IUBS2\\SQLEXPRESS;" +
-            "Initial Catalog=NORTHWND;" +
-            "User ID=sa;Password=genexus");
-        SqlCommand cmd;
-        SqlDataAdapter adapt;
-
-        // ID para actualizar y eliminar
+        // ID to update and remove
         int ID = 0;
-
+        
+        // Constructor
         public Categories()
         {
             InitializeComponent();
             DisplayData();
         }
 
+        // Insert
         private void btn_insert_Click(object sender, EventArgs e)
         {
             if (tb_category_name.Text != "" && tb_category_description.Text != "")
             {
-                cmd = new SqlCommand("insert into Categories(CategoryName,Description) values(@category,@description)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@category", tb_category_name.Text);
-                cmd.Parameters.AddWithValue("@description", tb_category_description.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                AccesoDatos.Categories.create(tb_category_name.Text,tb_category_description.Text);
                 MessageBox.Show("Insertado correctamente");
                 DisplayData();
                 ClearData();
@@ -42,18 +33,13 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             }
         }
 
+        // Update
         private void btn_update_Click(object sender, EventArgs e)
         {
             if (tb_category_name.Text != "" && tb_category_description.Text != "")
             {
-                cmd = new SqlCommand("update Categories set CategoryName=@category,Description=@description where CategoryID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.Parameters.AddWithValue("@category", tb_category_name.Text);
-                cmd.Parameters.AddWithValue("@description", tb_category_description.Text);
-                cmd.ExecuteNonQuery();
+                AccesoDatos.Categories.edit(ID,tb_category_name.Text,tb_category_description.Text);
                 MessageBox.Show("Registro Actualizado");
-                con.Close();
                 DisplayData();
                 ClearData();
             }
@@ -63,34 +49,26 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             }
         }
 
+        // Remove
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (ID != 0)
             {
-                cmd = new SqlCommand("delete Categories where CategoryID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                AccesoDatos.Categories.remove(ID);
                 MessageBox.Show("Registro Eliminado!");
                 DisplayData();
                 ClearData();
             }
             else
             {
-                MessageBox.Show("Please Select Record to Delete");
+                MessageBox.Show("Selecciona un registro para eliminar");
             }
         }
 
         //Display Data in DataGridView  
         private void DisplayData()
         {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Categories", con);
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
+            dataGridView1.DataSource = AccesoDatos.Categories.getAll();
         }
 
         //Clear Data de TextBox
