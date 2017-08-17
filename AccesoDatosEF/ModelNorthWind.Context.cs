@@ -28,6 +28,7 @@ namespace AccesoDatosEF
         }
     
         public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Order_Details> Order_Details { get; set; }
     
         public virtual ObjectResult<GetAllEmployees_Result> GetAllEmployees()
         {

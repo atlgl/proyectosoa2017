@@ -11,6 +11,7 @@ using EjemploNorthWindEmpleados.Guis.Employees;
 
 namespace EjemploNorthWindEmpleados.Gui.Employees
 {
+
     public partial class EmployeeWindow : Form
     {
         public EmployeeWindow()
@@ -20,7 +21,7 @@ namespace EjemploNorthWindEmpleados.Gui.Employees
 
         private void Ventana2_Load(object sender, EventArgs e)
         {
-           // dataGridView1.DataSource = AccesoDatos.Employees.getAll();
+           //dataGridView1.DataSource = Employees.getAll();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -60,10 +60,28 @@
     <Compile Include="Guis\Employees\EmployeeEditSave.Designer.cs">
       <DependentUpon>EmployeeEditSave.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindDataSet.Designer.cs">
+    <Compile Include="Guis\OrderDetails\.Designer.cs" />
+    <Compile Include="Guis\OrderDetails\OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\OrderDetails\OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guis\OrderDetails\OrderDetailsDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\OrderDetails\OrderDetailsDS.Designer.cs">
+      <DependentUpon>OrderDetailsDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindDataSet12.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +102,12 @@
     <EmbeddedResource Include="Guis\Employees\EmployeeEditSave.resx">
       <DependentUpon>EmployeeEditSave.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guis\OrderDetails\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guis\OrderDetails\OrderDetailsDS.resx">
+      <DependentUpon>OrderDetailsDS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,16 +121,27 @@
       <DependentUpon>EmployeeWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DiagramaClases.cd" />
-    <None Include="NorthwindDataSet.xsc">
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    <None Include="NorthwindDataSet1.xsc">
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="NorthwindDataSet.xsd">
+    <None Include="NorthwindDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NorthwindDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>NorthwindDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NorthwindDataSet.xss">
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    <None Include="NorthwindDataSet1.xss">
+      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet12.xsc">
+      <DependentUpon>NorthwindDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NorthwindDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NorthwindDataSet12.xss">
+      <DependentUpon>NorthwindDataSet12.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +185,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatosDs\AccesoDatosDs.csproj">
+      <Project>{f2c83713-8967-4635-98c2-9208665e1e67}</Project>
+      <Name>AccesoDatosDs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccesoDatosEF\AccesoDatosEF.csproj">
+      <Project>{7287b589-983e-4c41-8b51-121d4daf7332}</Project>
+      <Name>AccesoDatosEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{5605261d-98c4-4776-977a-8ca53e2803f1}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfNorthwind\WpfNorthwind.csproj">
+      <Project>{fe99ab97-42f5-4977-92ea-b57604bcb6f8}</Project>
+      <Name>WpfNorthwind</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

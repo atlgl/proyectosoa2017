@@ -45,8 +45,10 @@
     <Compile Include="AccesoDatos\Customers.cs" />
     <Compile Include="AccesoDatos\Employees.cs" />
     <Compile Include="AccesoDatos\IOperaciones.cs" />
+    <Compile Include="AccesoDatos\OrdersDetails.cs" />
     <Compile Include="Entidades\Customer.cs" />
     <Compile Include="Entidades\Employee.cs" />
+    <Compile Include="Entidades\OrderDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

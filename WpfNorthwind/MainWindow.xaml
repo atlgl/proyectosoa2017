@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="0,0,0,-0.2" VerticalAlignment="Top" Height="321" Width="518">
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="0,0,-1,0" VerticalAlignment="Top" Height="146" Width="518">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="IdEmployees"/>
             </DataGrid.Columns>
         </DataGrid>
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="0,181,0,0" VerticalAlignment="Top" Height="138" Width="517" SelectionChanged="dataGrid1_SelectionChanged"/>
+        <Label x:Name="label" Content="Order details" HorizontalAlignment="Left" Margin="21,161,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

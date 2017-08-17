@@ -155,7 +155,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
               <Mapping SourceColumn="PhotoPath" DataSetColumn="PhotoPath" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Employees] WHERE ([EmployeeID] = @Original_EmployeeID) </CommandText>
@@ -165,7 +165,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetAllEmployees</CommandText>
@@ -175,7 +175,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.Employees" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetEmployeeById" Modifier="Public" Name="GetEmployeeById" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="GetEmployeeById">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.Employees" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetEmployeeById" Modifier="Public" Name="GetEmployeeById" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetEmployeeById">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireDate, Address, City, Region, PostalCode, Country, HomePhone, Extension, Photo, Notes, ReportsTo, PhotoPath
@@ -187,7 +187,7 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Employees] ([LastName], [FirstName], [Title], [TitleOfCourtesy], [BirthDate], [HireDate], [Address], [City], [Region], [PostalCode], [Country], [HomePhone], [Extension], [Photo], [Notes], [ReportsTo], [PhotoPath]) VALUES (@LastName, @FirstName, @Title, @TitleOfCourtesy, @BirthDate, @HireDate, @Address, @City, @Region, @PostalCode, @Country, @HomePhone, @Extension, @Photo, @Notes, @ReportsTo, @PhotoPath);</CommandText>
@@ -213,7 +213,7 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Employees] SET [LastName] = @LastName, [FirstName] = @FirstName, [Title] = @Title, [TitleOfCourtesy] = @TitleOfCourtesy, [BirthDate] = @BirthDate, [HireDate] = @HireDate, [Address] = @Address, [City] = @City, [Region] = @Region, [PostalCode] = @PostalCode, [Country] = @Country, [HomePhone] = @HomePhone, [Extension] = @Extension, [Photo] = @Photo, [Notes] = @Notes, [ReportsTo] = @ReportsTo, [PhotoPath] = @PhotoPath WHERE ([EmployeeID] = @Original_EmployeeID)</CommandText>
@@ -241,6 +241,70 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
                 </UpdateCommand>
               </DbSource>
             </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Order Details1TableAdapter" GeneratorDataComponentClassName="Order_Details1TableAdapter" Name="Order Details1" UserDataComponentName="Order Details1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.[Order Details]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Order Details] WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_UnitPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@Original_Discount" Precision="0" ProviderType="Real" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Order Details] ([OrderID], [ProductID], [UnitPrice], [Quantity], [Discount]) VALUES (@OrderID, @ProductID, @UnitPrice, @Quantity, @Discount);
+SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM [Order Details] WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@UnitPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@Discount" Precision="0" ProviderType="Real" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderID, ProductID, UnitPrice, Quantity, Discount
+FROM            [Order Details]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Order Details] SET [OrderID] = @OrderID, [ProductID] = @ProductID, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [Discount] = @Discount WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount));
+SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM [Order Details] WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@UnitPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@Discount" Precision="0" ProviderType="Real" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_UnitPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@Original_Discount" Precision="0" ProviderType="Real" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderID" DataSetColumn="OrderID" />
+              <Mapping SourceColumn="ProductID" DataSetColumn="ProductID" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
+            </Mappings>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -352,11 +416,27 @@ WHERE  (EmployeeID = @employeeid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Order_x0020_Details1" msprop:Generator_TableClassName="Order_Details1DataTable" msprop:Generator_TableVarName="tableOrder_Details1" msprop:Generator_TablePropName="Order_Details1" msprop:Generator_RowDeletingName="Order_Details1RowDeleting" msprop:Generator_RowChangingName="Order_Details1RowChanging" msprop:Generator_RowEvHandlerName="Order_Details1RowChangeEventHandler" msprop:Generator_RowDeletedName="Order_Details1RowDeleted" msprop:Generator_UserTableName="Order Details1" msprop:Generator_RowChangedName="Order_Details1RowChanged" msprop:Generator_RowEvArgName="Order_Details1RowChangeEvent" msprop:Generator_RowClassName="Order_Details1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" msprop:Generator_ColumnVarNameInTable="columnOrderID" msprop:Generator_ColumnPropNameInRow="OrderID" msprop:Generator_ColumnPropNameInTable="OrderIDColumn" msprop:Generator_UserColumnName="OrderID" type="xs:int" />
+              <xs:element name="ProductID" msprop:Generator_ColumnVarNameInTable="columnProductID" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_UserColumnName="ProductID" type="xs:int" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:short" />
+              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:float" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Employees" />
       <xs:field xpath="mstns:EmployeeID" />
+    </xs:unique>
+    <xs:unique name="Order_x0020_Details1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Order_x0020_Details1" />
+      <xs:field xpath="mstns:OrderID" />
+      <xs:field xpath="mstns:ProductID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

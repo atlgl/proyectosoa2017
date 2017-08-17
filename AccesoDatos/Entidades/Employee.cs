@@ -16,10 +16,6 @@ namespace EjemploNorthWindEmpleados.Entidades
         //    get { return id; }
         //    set { id = value; }
         //}
-
-              
-        
-        
         public int Id { get; set; }
 
         public string FirstName { get; set; }
@@ -27,11 +23,5 @@ namespace EjemploNorthWindEmpleados.Entidades
         public string Title { get; set; }
 
         public string LastName { get; set; }
-
-
-
-
-
-
     }
 }

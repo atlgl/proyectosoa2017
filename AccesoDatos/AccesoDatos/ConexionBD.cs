@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 using System.Data.SqlClient;
-
+using System.Data.Sql;
 
 namespace EjemploNorthWindEmpleados.AccesoDatos
 {
@@ -11,41 +11,73 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
 
     public class ConexionBD
     {
-        private SqlConnection con;
+        public SqlConnection con;
         private SqlCommand cmd;
         
         public ConexionBD()
         {
-            string cadena = ConfigurationManager.ConnectionStrings["Micadena"].ConnectionString;
-            con = new SqlConnection(cadena);
-            cmd = new SqlCommand();
-            cmd.Connection = con;
+            try
+            {
+                string cadena = ConfigurationManager.ConnectionStrings["Micadena"].ConnectionString;
+                con = new SqlConnection(cadena);
+                cmd = new SqlCommand();
+                cmd.Connection = con;
+            }
+            catch(SqlException ex)
+            {
+                
+            }
         }
 
         public int executeNonQuery(string consulta)
         {
-            cmd.CommandText = consulta;
-            open();
-            int retorno= cmd.ExecuteNonQuery();
-            close();
+            int retorno = 0;
+
+            try
+            {
+                cmd.CommandText = consulta;
+                open();
+                retorno = cmd.ExecuteNonQuery();
+                close();
+            }
+            catch(SqlException e)
+            {
+
+            }
             return retorno;
         }
 
         public SqlDataReader executeQuery(string consulta)
         {
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = consulta;
-            open();
-            return cmd.ExecuteReader();
+            try
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = consulta;
+                open();
+
+                } catch(SqlException e){
+                
+                }
+           return cmd.ExecuteReader();
         }
 
         public SqlDataReader executeQuery(string comando,SqlParameterCollection p)
         {
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = comando;
-            foreach (SqlParameter item in p)
-                cmd.Parameters.Add(item);
-            open();
+
+            try
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = comando;
+                foreach (SqlParameter item in p)
+                    cmd.Parameters.Add(item);
+                open();
+            }
+            catch(SqlException e)
+            {
+
+            }
+
+
             return cmd.ExecuteReader();
         }
 
@@ -66,7 +98,14 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
         {
             if(con !=null && con.State == System.Data.ConnectionState.Closed)
             {
-                con.Open();
+                try
+                {
+                    con.Open();
+                }
+                catch(SqlException e)
+                {
+
+                }
             }
         }
 
