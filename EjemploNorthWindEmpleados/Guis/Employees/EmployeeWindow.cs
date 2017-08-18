@@ -6,7 +6,7 @@ namespace EjemploNorthWindEmpleados.Gui.Employees
 {
     public partial class EmployeeWindow : Form
     {
-        private int indexFromDataGrid = 0;
+        //private int indexFromDataGrid = 0;
         public EmployeeWindow()
         {
             InitializeComponent();

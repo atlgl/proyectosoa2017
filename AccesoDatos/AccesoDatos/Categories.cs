@@ -6,6 +6,9 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
 {
     public class Categories
     {
+        /// <summary>  
+        ///  Select Method (List<Category>) 
+        /// </summary>  
         public static List<Category> getAll()
         {
             ConexionBD con = new ConexionBD();
@@ -23,7 +26,10 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
             return listaobjetos;
         }
 
-        public static int edit(int id, string name, string description)
+        /// <summary>  
+        ///  Update Method(void) 
+        /// </summary>  
+        public static void edit(int id, string name, string description)
         {
             SqlCommand cmd;
             ConexionBD con = new ConexionBD();
@@ -32,12 +38,14 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
             cmd.Parameters.AddWithValue("@category", name);
             cmd.Parameters.AddWithValue("@description", description);
             cmd.Parameters.AddWithValue("@id", id);
-            int res = cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             con.close();
-            return res;
         }
 
-        public static int create(string name, string description)
+        /// <summary>  
+        ///  Insert Method (void)  
+        /// </summary>  
+        public static void create(string name, string description)
         {
             SqlCommand cmd;
             ConexionBD con = new ConexionBD();
@@ -45,17 +53,18 @@ namespace EjemploNorthWindEmpleados.AccesoDatos
             cmd = new SqlCommand("insert into Categories(CategoryName, Description) values(@category, @description)", con.con);
             cmd.Parameters.AddWithValue("@category", name);
             cmd.Parameters.AddWithValue("@description", description);
-            int res = cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             con.close();
-            return res;
         }
 
-        public static int remove(int id)
+        /// <summary>  
+        ///  Delete Method (void) 
+        /// </summary>  
+        public static void remove(int id)
         {
             ConexionBD con = new ConexionBD();
-            int res = con.executeNonQuery("DELETE FROM Categories WHERE CategoryID=" + id);
+            con.executeNonQuery("DELETE FROM Categories WHERE CategoryID=" + id);
             con.close();
-            return res;
         }
     }
 }

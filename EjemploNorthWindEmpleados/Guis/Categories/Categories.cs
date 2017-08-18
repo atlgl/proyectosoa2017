@@ -1,31 +1,40 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace EjemploNorthWindEmpleados.Guis.Categories
 {
     public partial class Categories : Form
     {
-        // ID to update and remove
         int ID = 0;
-        
-        // Constructor
+        int typeDataAcces;
+
+        /// <summary>  
+        ///  Constructor  
+        /// </summary>  
         public Categories()
         {
+            // TODO: Inicializa la GUI y alimenta el dataGridView con los datos
             InitializeComponent();
             DisplayData();
         }
 
-        // Insert
+        /// <summary>  
+        ///  Insert Click Event 
+        /// </summary>  
         private void btn_insert_Click(object sender, EventArgs e)
         {
             if (tb_category_name.Text != "" && tb_category_description.Text != "")
             {
-                AccesoDatos.Categories.create(tb_category_name.Text,tb_category_description.Text);
-                MessageBox.Show("Insertado correctamente");
-                DisplayData();
-                ClearData();
+                if (typeDataAcces == 1)
+                {
+                    AccesoDatos.Categories.create(tb_category_name.Text, tb_category_description.Text);
+                    MessageBox.Show("Insertado correctamente");
+                    DisplayData();
+                    ClearData();
+                } else if (typeDataAcces == 2)
+                {
+                    
+                }
             }
             else
             {
@@ -33,15 +42,20 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             }
         }
 
-        // Update
+        /// <summary>  
+        ///  Update Click Event  
+        /// </summary>  
         private void btn_update_Click(object sender, EventArgs e)
         {
             if (tb_category_name.Text != "" && tb_category_description.Text != "")
             {
-                AccesoDatos.Categories.edit(ID,tb_category_name.Text,tb_category_description.Text);
-                MessageBox.Show("Registro Actualizado");
-                DisplayData();
-                ClearData();
+                if (typeDataAcces == 1)
+                {
+                    AccesoDatos.Categories.edit(ID, tb_category_name.Text, tb_category_description.Text);
+                    MessageBox.Show("Registro Actualizado");
+                    DisplayData();
+                    ClearData();
+                }                  
             }
             else
             {
@@ -49,15 +63,20 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             }
         }
 
-        // Remove
+        /// <summary>  
+        ///  Remove Click Event 
+        /// </summary>  
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (ID != 0)
             {
-                AccesoDatos.Categories.remove(ID);
-                MessageBox.Show("Registro Eliminado!");
-                DisplayData();
-                ClearData();
+                if (typeDataAcces == 1)
+                {
+                    AccesoDatos.Categories.remove(ID);
+                    MessageBox.Show("Registro Eliminado!");
+                    DisplayData();
+                    ClearData();
+                }                
             }
             else
             {
@@ -65,13 +84,17 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             }
         }
 
-        //Display Data in DataGridView  
+        /// <summary>  
+        ///  Set Data to DataGridView  
+        /// </summary>  
         private void DisplayData()
         {
             dataGridView1.DataSource = AccesoDatos.Categories.getAll();
         }
 
-        //Clear Data de TextBox
+        /// <summary>  
+        ///  Clear Data from editTexts 
+        /// </summary>  
         private void ClearData()
         {
             tb_category_name.Text = "";
@@ -79,7 +102,20 @@ namespace EjemploNorthWindEmpleados.Guis.Categories
             ID = 0;
         }
 
-        //dataGridView1 RowHeaderMouseClick Event  
+        /// <summary>  
+        ///  Change the Data access type
+        /// <remarks>
+        /// This function give you a flag
+        /// to change the DLL from AccesoDatosg</remarks>
+        /// </summary>  
+        public int setTypeDataAccess(int typeData)
+        {
+            return typeDataAcces = typeData;
+        }
+
+        /// <summary>  
+        ///  Row Header Mouse Click Event
+        /// </summary>  
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());

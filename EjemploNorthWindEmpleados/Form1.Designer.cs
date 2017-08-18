@@ -50,9 +50,12 @@
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionDBDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.conexionEntityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.consumoWCFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
@@ -81,7 +84,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(768, 305);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // customerIDDataGridViewTextBoxColumn
             // 
@@ -180,6 +182,7 @@
             this.conexionBDToolStripMenuItem,
             this.conexionDBDatasetToolStripMenuItem,
             this.conexionEntityFrameworkToolStripMenuItem,
+            this.consumoWCFToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
@@ -211,10 +214,27 @@
             // 
             // conexionDBDatasetToolStripMenuItem
             // 
+            this.conexionDBDatasetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriesToolStripMenuItem1,
+            this.employeesToolStripMenuItem1});
             this.conexionDBDatasetToolStripMenuItem.Name = "conexionDBDatasetToolStripMenuItem";
             this.conexionDBDatasetToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.conexionDBDatasetToolStripMenuItem.Text = "Conexion DB Dataset";
             this.conexionDBDatasetToolStripMenuItem.Click += new System.EventHandler(this.conexionDBDatasetToolStripMenuItem_Click);
+            // 
+            // categoriesToolStripMenuItem1
+            // 
+            this.categoriesToolStripMenuItem1.Name = "categoriesToolStripMenuItem1";
+            this.categoriesToolStripMenuItem1.Size = new System.Drawing.Size(156, 26);
+            this.categoriesToolStripMenuItem1.Text = "Categories";
+            this.categoriesToolStripMenuItem1.Click += new System.EventHandler(this.categoriesToolStripMenuItem1_Click);
+            // 
+            // employeesToolStripMenuItem1
+            // 
+            this.employeesToolStripMenuItem1.Name = "employeesToolStripMenuItem1";
+            this.employeesToolStripMenuItem1.Size = new System.Drawing.Size(156, 26);
+            this.employeesToolStripMenuItem1.Text = "Employees";
+            this.employeesToolStripMenuItem1.Click += new System.EventHandler(this.employeesToolStripMenuItem1_Click);
             // 
             // conexionEntityFrameworkToolStripMenuItem
             // 
@@ -238,6 +258,13 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // consumoWCFToolStripMenuItem
+            // 
+            this.consumoWCFToolStripMenuItem.Name = "consumoWCFToolStripMenuItem";
+            this.consumoWCFToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.consumoWCFToolStripMenuItem.Text = "ConsumoWCF";
+            this.consumoWCFToolStripMenuItem.Click += new System.EventHandler(this.consumoWCFToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -287,6 +314,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consumoWCFToolStripMenuItem;
     }
 }
 

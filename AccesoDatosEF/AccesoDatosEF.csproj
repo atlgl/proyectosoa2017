@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories.cs">
+      <DependentUpon>ModelNorthWind.tt</DependentUpon>
+    </Compile>
     <Compile Include="Employees.cs">
       <DependentUpon>ModelNorthWind.tt</DependentUpon>
     </Compile>

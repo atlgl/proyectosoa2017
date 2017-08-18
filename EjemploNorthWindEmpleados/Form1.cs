@@ -1,13 +1,7 @@
 ﻿using EjemploNorthWindEmpleados.Gui.Employees;
 using EjemploNorthWindEmpleados.Guis.Categories;
+using EjemploNorthWindEmpleados.Guis.Consumo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EjemploNorthWindEmpleados
@@ -23,8 +17,6 @@ namespace EjemploNorthWindEmpleados
         {
             // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
-
-
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,20 +47,34 @@ namespace EjemploNorthWindEmpleados
 
         private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EmployeeWindow ventanita = new EmployeeWindow();
-            ventanita.Show();
+            
         }
 
         private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Add my own windowform from table
             Categories ventana = new Categories();
+            ventana.setTypeDataAccess(1);
             ventana.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void employeesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            EmployeeWindow ventanita = new EmployeeWindow();
+            ventanita.Show();
+        }
 
+        private void categoriesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Categories ventana = new Categories();
+            ventana.setTypeDataAccess(2);
+            ventana.Show();
+        }
+
+        private void consumoWCFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsumoWCF ventana = new ConsumoWCF();
+            ventana.Show();
         }
     }
 }

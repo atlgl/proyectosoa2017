@@ -10,12 +10,13 @@
 namespace AccesoDatosEF
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class GetEmployeesAsc_Result
+    public partial class Categories
     {
-        public int EmployeeID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Title { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
+        public string Description { get; set; }
+        public byte[] Picture { get; set; }
     }
 }

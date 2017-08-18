@@ -60,6 +60,12 @@
     <Compile Include="Guis\Categories\Categories.Designer.cs">
       <DependentUpon>Categories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guis\Consumo\ConsumoWCF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guis\Consumo\ConsumoWCF.Designer.cs">
+      <DependentUpon>ConsumoWCF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guis\Employees\EmployeeEditSave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guis\Categories\Categories.resx">
       <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guis\Consumo\ConsumoWCF.resx">
+      <DependentUpon>ConsumoWCF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guis\Employees\EmployeeEditSave.resx">
       <DependentUpon>EmployeeEditSave.cs</DependentUpon>
@@ -161,6 +170,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatosDs\AccesoDatosDs.csproj">
+      <Project>{f2c83713-8967-4635-98c2-9208665e1e67}</Project>
+      <Name>AccesoDatosDs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
       <Project>{5605261d-98c4-4776-977a-8ca53e2803f1}</Project>
       <Name>AccesoDatos</Name>

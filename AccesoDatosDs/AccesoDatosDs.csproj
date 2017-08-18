@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetNorthWind.cs">
+      <DependentUpon>DataSetNorthWind.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetNorthWind.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
